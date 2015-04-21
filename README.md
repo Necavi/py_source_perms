@@ -1,17 +1,24 @@
 # SourcePerms
+
 Easy to use permissions for SourcePython
+
 Configuration:
+
 The configuration file for permissions is located at cfg/source-python/auth/admins.json
+
 The format is:
+```json
 {
 	"<steamid>" :
 	[
-		"permission1",
+		"permission1,"
 		"permission2"
 	]
 }
+```
 
 Example using permissions from my admin_commands plugin:
+```json
 {
 	"STEAM_0:0:11672517": 
 	[
@@ -19,6 +26,7 @@ Example using permissions from my admin_commands plugin:
 		"sp.map.map",
 	]
 }
+```
 This would give the player access to the following commands: sp_ignite, sp_freeze, sp_unfreeze and sp_map.
 
 Simple. Easy. Powerful.
