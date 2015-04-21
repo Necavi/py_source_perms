@@ -6,25 +6,71 @@ Configuration:
 
 The configuration file for permissions is located at cfg/source-python/auth/admins.json
 
-The format is:
+The group config format is:
 ```json
 {
-	"<steamid>" :
-	[
-		"permission1,"
-		"permission2"
-	]
+	"<groupname>" : 
+	{
+		"parents" :
+		[
+			"group1",
+			"group2"
+		],
+		"permissions" :
+		[
+			"permission1",
+			"permission2"
+		]
+	}
 }
 ```
 
-Example using permissions from my admin_commands plugin:
+The admin config format is:
+```json
+{
+	"<steamid>" :
+	{
+		"groups" :
+		[
+			"group1",
+			"group2"
+		],
+		"permissions" :
+		[
+			"permission1",
+			"permission2"
+		]
+	}
+}
+```
+
+Example group config:
+```json
+{
+	"admin" :
+	{
+		"permissions" :
+		[
+			"sp.fun.*"
+		]
+	}
+}
+```
+
+Example admin config:
 ```json
 {
 	"STEAM_0:0:11672517": 
-	[
-		"sp.fun.*",
-		"sp.map.map",
-	]
+	{
+		"groups" :
+		[
+			"admins"
+		],
+		"permissions" :
+		[
+			"sp.map.map"
+		]
+	}
 }
 ```
 This would give the player access to the following commands: sp_ignite, sp_freeze, sp_unfreeze and sp_map.
