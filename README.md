@@ -4,7 +4,7 @@ Easy to use permissions for SourcePython
 
 Configuration:
 
-The configuration file for permissions is located at cfg/source-python/auth/admins.json
+The configuration file for permissions is located at cfg/source-python/auth/
 
 The group config format is:
 ```json
@@ -30,7 +30,7 @@ The admin config format is:
 {
 	"<steamid>" :
 	{
-		"groups" :
+		"parents" :
 		[
 			"group1",
 			"group2"
@@ -62,7 +62,7 @@ Example admin config:
 {
 	"STEAM_0:0:11672517": 
 	{
-		"groups" :
+		"parents" :
 		[
 			"admins"
 		],
@@ -76,5 +76,3 @@ Example admin config:
 This would give the player access to the following commands: sp_ignite, sp_freeze, sp_unfreeze and sp_map.
 
 Simple. Easy. Powerful.
-
-Groups and inheritance are planned for the future.
