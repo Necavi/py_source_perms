@@ -153,6 +153,8 @@ class SourcePerms(AuthBase):
             source.load()
 
     def unload(self):
+        for source in active_permission_sources:
+            source.unload()
         players.clear()
         groups.clear()
 
